@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akavasseri</title>
+    <meta
+      name="description"
+      content="Personal website for Akavasseri, including experience, projects, publications, and blog."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Akavasseri home">
+        <span>akavasseri.com</span>
+      </a>
+
+      <nav class="tabs" aria-label="Main navigation">
+        <a class="tab is-active" href="#home" data-tab="home">Home</a>
+        <a class="tab" href="#experience" data-tab="experience">Experience</a>
+        <a class="tab" href="#projects" data-tab="projects">Projects</a>
+        <a class="tab" href="#publications" data-tab="publications">Publications</a>
+        <a class="tab" href="#blog" data-tab="blog">Blog</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel hero is-active" id="home" data-panel="home" tabindex="-1">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-content">
+          <h1>Akavasseri</h1>
+          <p>Personal website</p>
+        </div>
+      </section>
+
+      <section class="panel home-content is-active" data-panel="home" tabindex="-1">
+        <div class="section-content">
+          <h2>About Me</h2>
+          <div class="about-layout">
+            <figure class="portrait-slot" aria-label="Profile picture placeholder">
+              <div class="portrait-initials">A</div>
+              <figcaption>Replace with your photo</figcaption>
+            </figure>
+
+            <div class="about-copy">
+              <p>
+                Add a short description here: who you are, what you work on, what you
+                are curious about, and what you want visitors to remember.
+              </p>
+              <p>
+                This space can hold a more personal paragraph too: research interests,
+                hobbies, current goals, or the kind of work you are looking for.
+              </p>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <h3>Resume</h3>
+            <a class="button-link" href="#" aria-disabled="true">Add resume link</a>
+          </div>
+
+          <div class="skills-block">
+            <h3>Skills</h3>
+            <p class="subtle">(placeholders for now)</p>
+            <div class="skill-columns">
+              <div>
+                <h4>Technical</h4>
+                <ul>
+                  <li>Add skill</li>
+                  <li>Add skill</li>
+                  <li>Add skill</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Research</h4>
+                <ul>
+                  <li>Add skill</li>
+                  <li>Add skill</li>
+                  <li>Add skill</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-links" aria-label="Profile links">
+            <a href="mailto:you@example.com">Email</a>
+            <a href="https://www.linkedin.com/" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="experience" data-panel="experience" tabindex="-1">
+        <div class="section-content">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div>
+                <h3>Add organization</h3>
+                <p class="subtle">Add role title and dates</p>
+              </div>
+              <p>Add roles, internships, research positions, teaching, or other professional milestones here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="projects" data-panel="projects" tabindex="-1">
+        <div class="section-content">
+          <h2>Projects</h2>
+          <div class="item-grid">
+            <article class="project-item">
+              <div class="project-thumb">Project image</div>
+              <h3>Add project name</h3>
+              <p>Add project descriptions, links, technologies, screenshots, or demos here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="publications" data-panel="publications" tabindex="-1">
+        <div class="section-content">
+          <h2>Publications</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div>
+                <h3>Add publication title</h3>
+                <p class="subtle">Add venue, year, and coauthors</p>
+              </div>
+              <p>Add papers, preprints, posters, talks, citations, and links to PDFs or publisher pages here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="blog" data-panel="blog" tabindex="-1">
+        <div class="section-content">
+          <h2>Blog</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div>
+                <h3>Add post title</h3>
+                <p class="subtle">Add date</p>
+              </div>
+              <p>Add essays, updates, tutorials, reading notes, or project writeups here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Akavasseri</span>
+      <span>Built for akavasseri.com</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
