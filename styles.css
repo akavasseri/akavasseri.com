@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #fff7ea;
-  --surface: #fffdf8;
-  --ink: #2f1805;
-  --muted: #8a6043;
-  --line: #f0c997;
-  --nav: rgba(117, 54, 8, 0.94);
-  --nav-ink: #fff7ea;
-  --accent: #e97816;
-  --shadow: 0 14px 30px rgba(124, 62, 11, 0.16);
+  --bg: #fffde0;
+  --surface: #f7dea0;
+  --ink: #3d2100;
+  --muted: #7a4a00;
+  --line: #ffcd00;
+  --nav: #ff8c00;
+  --nav-ink: #fffde0;
+  --accent: #ffa500;
+  --shadow: 0 14px 30px rgba(255, 140, 0, 0.16);
 }
 
 * {
@@ -45,8 +45,7 @@ a {
   min-height: 61px;
   padding: 0.6rem clamp(1rem, 4vw, 3rem);
   background: var(--nav);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 10px rgba(255, 140, 0, 0.22);
 }
 
 .brand {
@@ -80,7 +79,7 @@ a {
 .tab:hover {
   color: #fff;
   outline: 2px solid transparent;
-  background: rgba(255, 255, 255, 0.12);
+  background: #ffa500;
 }
 
 .tab.is-active {
@@ -109,17 +108,14 @@ main {
   min-height: calc(100vh - 61px);
   place-items: center;
   overflow: hidden;
-  color: #fff;
+  color: var(--ink);
   text-align: center;
 }
 
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(80, 35, 4, 0.35), rgba(80, 35, 4, 0.42)),
-    radial-gradient(circle at 50% 35%, rgba(255, 233, 184, 0.36), transparent 0 15%, rgba(0, 0, 0, 0) 16%),
-    linear-gradient(145deg, #ffb347, #f47c20 48%, #8f3f05);
+  background: #ffcd00;
 }
 
 .hero-content {
@@ -228,9 +224,7 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 38%, rgba(255, 253, 248, 0.9), transparent 0 18%, rgba(0, 0, 0, 0) 19%),
-    linear-gradient(145deg, #ffe8b8, #f8bf63);
+  background: #f7dea0;
   box-shadow: var(--shadow);
 }
 
@@ -238,7 +232,7 @@ h3 {
   display: grid;
   height: 100%;
   place-items: center;
-  color: rgba(32, 36, 43, 0.28);
+  color: rgba(122, 74, 0, 0.32);
   font-size: clamp(6rem, 15vw, 10rem);
   font-weight: 850;
   line-height: 1;
@@ -250,7 +244,7 @@ h3 {
   bottom: 1rem;
   left: 1rem;
   padding: 0.7rem 0.8rem;
-  background: rgba(255, 253, 248, 0.88);
+  background: #fffde0;
   color: var(--ink);
   font-size: 0.92rem;
   font-weight: 760;
@@ -333,7 +327,7 @@ ul {
   place-items: center;
   margin-bottom: 1rem;
   overflow: hidden;
-  background: #ffe8bd;
+  background: #f7dea0;
   color: var(--muted);
   font-weight: 700;
 }
