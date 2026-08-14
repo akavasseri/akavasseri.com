@@ -39,12 +39,9 @@
         <div class="section-content">
             <h2>About Me</h2>
             <div class="about-layout">
-                <figure class="portrait-slot" aria-label="Profile picture placeholder">
-                    <div class="portrait-initials">
-                    <img src="images/headshot.jpg" alt="">
-                    </div>
+                <figure class="portrait-slot">
+                    <img class="portrait-img" src="images/headshot.jpg" alt="">
                 </figure>
-
                 <div class="about-copy">
                     <p>
                         Hi I’m Abhijna! I’m currently a rising junior at Princeton University studying Electrical and Computer Engineering with a minor in Computer Science and a concentration in Computer Systems. Currently, I am working on hardware-software co-design projects as a hardware acceleration intern.
@@ -106,7 +103,13 @@
                         <p class="subtle">Hardware Acceleration Intern
                             June 2026 - August 2026</p>
                     </div>
-                    <p>Building an agentic AI workflow for FPGA acceleration that uses high-level synthesis to translate C/C++ designs into synthesizable RTL/HDL</p>
+                    <p>1. Extending a hardware resource scheduler for a DNN accelerator using MILP and genetic algorithm search to reduce
+                        inference latency on an AMD Versal VCK190; proved and removed 9 redundant constraints while preserving
+                        scheduling correctness
+                        2. Developed an automated hardware test-generation framework that targets uncovered RTL branches, increasing
+                        line/toggle/branch coverage from 20-60% to a consistent 95%; analyzed RTL simulation and synthesis results to
+                        verify functional behavior and timing across generated hardware designs
+                    </p>
                 </article>
 
                 <article class="timeline-item">
