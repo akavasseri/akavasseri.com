@@ -384,6 +384,17 @@ ul {
   font-size: 0.92rem;
 }
 
+.portrait-slot {
+    overflow: hidden;
+}
+
+.portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
