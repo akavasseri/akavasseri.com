@@ -1,36 +1,23 @@
-const tabs = Array.from(document.querySelectorAll("[data-tab]"));
-const panels = Array.from(document.querySelectorAll("[data-panel]"));
-const year = document.querySelector("#year");
+const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+const sections = navLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 
-function activateTab(tabName, shouldFocus = false) {
-  const selectedTab = tabs.find((tab) => tab.dataset.tab === tabName) || tabs[0];
-  const selectedPanels = panels.filter((panel) => panel.dataset.panel === selectedTab.dataset.tab);
-  const focusPanel = selectedPanels[0] || panels[0];
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-  tabs.forEach((tab) => {
-    const isSelected = tab === selectedTab;
-    tab.classList.toggle("is-active", isSelected);
-    tab.setAttribute("aria-current", isSelected ? "page" : "false");
-  });
+      if (!visible) return;
 
-  panels.forEach((panel) => {
-    panel.classList.toggle("is-active", selectedPanels.includes(panel));
-  });
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
+      });
+    },
+    { rootMargin: "-20% 0px -65% 0px", threshold: [0.1, 0.4, 0.7] }
+  );
 
-  if (shouldFocus) {
-    focusPanel.focus({ preventScroll: true });
-  }
+  sections.forEach((section) => observer.observe(section));
 }
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    activateTab(tab.dataset.tab, true);
-  });
-});
-
-window.addEventListener("hashchange", () => {
-  activateTab(window.location.hash.replace("#", ""), true);
-});
-
-activateTab(window.location.hash.replace("#", "") || "home");
-year.textContent = new Date().getFullYear();

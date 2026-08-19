@@ -6,244 +6,204 @@
     <title>Abhijna Kavasseri</title>
     <meta
             name="description"
-            content="Personal website for Abhijna Kavasseri, including experience, projects, publications, and blog."
+            content="Personal website for Abhijna Kavasseri, including experience, projects, research, and blog."
     >
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <header class="site-header">
-    <a class="brand" href="#home" aria-label="Abhijna Kavasseri home">
-        <span>Abhijna Kavasseri</span>
-    </a>
+    <a class="brand" href="#home" aria-label="Abhijna Kavasseri home">Abhijna Kavasseri</a>
 
-    <nav class="tabs" aria-label="Main navigation">
-        <a class="tab is-active" href="#home" data-tab="home">Home</a>
-        <a class="tab" href="#experience" data-tab="experience">Experience</a>
-        <a class="tab" href="#projects" data-tab="projects">Projects</a>
-        <a class="tab" href="#research" data-tab="research">Research</a>
-        <a class="tab" href="#blog" data-tab="blog">Blog</a>
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#blog">Blog</a>
     </nav>
 </header>
 
-<main>
-    <section class="panel hero is-active" id="home" data-panel="home" tabindex="-1">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="hero-content">
-            <h1>Abhijna Kavasseri</h1>
-            <p>Personal website</p>
+<main class="page-shell">
+    <section class="intro-section" id="home">
+        <div class="intro-main">
+            <figure class="portrait-slot">
+                <img class="portrait-img" src="images/headshot.jpg" alt="Abhijna Kavasseri">
+            </figure>
+
+            <div>
+                <p class="eyebrow">Electrical and Computer Engineering @ Princeton</p>
+                <h1>Abhijna Kavasseri</h1>
+                <p class="intro-summary">
+                    Hardware-software co-design, computer architecture, RTL design, FPGAs, and the fun places where music and electrical engineering overlap.
+                </p>
+
+                <div class="quick-links" aria-label="Profile links">
+                    <a href="mailto:abhijna.kavasseri@gmail.com">Email</a>
+                    <a href="https://github.com/akavasseri" rel="noreferrer">GitHub</a>
+                    <a href="#" aria-disabled="true">Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-details">
+            <article>
+                <h2>Currently</h2>
+                <ul>
+                    <li>Rising junior studying Electrical and Computer Engineering at Princeton.</li>
+                    <li>Working on hardware-software co-design as a hardware acceleration intern.</li>
+                    <li>Exploring digital logic design, computer architecture, RTL design, and FPGA projects.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Things I Like</h2>
+                <ul>
+                    <li>Analog audio, embedded systems, FPGA games, and hardware projects.</li>
+                    <li>Running, swimming, yoga, baking, Greek mythology, matcha, EDM, classical singing, and piano.</li>
+                </ul>
+            </article>
         </div>
     </section>
 
-    <section class="panel home-content is-active" data-panel="home" tabindex="-1">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <div class="about-layout">
-                <figure class="portrait-slot">
-                    <img class="portrait-img" src="images/headshot.jpg" alt="">
-                </figure>
-                <div class="about-copy">
-                    <p>
-                        Hi I’m Abhijna! I’m currently a rising junior at Princeton University studying Electrical and Computer Engineering with a minor in Computer Science and a concentration in Computer Systems. Currently, I am working on hardware-software co-design projects as a hardware acceleration intern.
-                    </p>
-
-                    <p>
-                        My interests are at the intersection of hardware and software. A few interests include: digital logic design, computer architecture, RTL design, and FPGAs. In my free time my projects lie more on the hardware consisting of analog audio, embedded systems, and FPGA game projects. My favorite passions of mine to mix are music and electrical engineering, which creates some of the coolest projects (you can see this in the projects tab!).
-
-                        Outside of my technical side I have many hobbies including: running, swimming, yoga, baking, reading Greek mythology, making matcha, listening to EDM music, singing classical music and playing the piano.
-                    </p>
-                </div>
-            </div>
-
-            <div class="resume-block">
-                <h3>Resume</h3>
-                <a class="button-link" href="#" aria-disabled="true">Add resume link</a>
-            </div>
-
-            <!--
-            <div class="skills-block">
-              <h3>Skills</h3>
-              <p class="subtle">(placeholders for now)</p>
-              <div class="skill-columns">
-                <div>
-                  <h4>Technical</h4>
-                  <ul>
-                    <li>Add skill</li>
-                    <li>Add skill</li>
-                    <li>Add skill</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4>Research</h4>
-                  <ul>
-                    <li>Add skill</li>
-                    <li>Add skill</li>
-                    <li>Add skill</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            -->
-
-            <div class="quick-links" aria-label="Profile links">
-                <a href="mailto:abhijna.kavasseri@gmail.com">Email</a>
-                <a href="https://github.com/akavasseri" rel="noreferrer">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel" id="experience" data-panel="experience" tabindex="-1">
-        <div class="section-content">
-            <h2>Experience</h2>
-
-            <div class="timeline">
-                <article class="timeline-item">
-                    <div>
-                        <h3>North Dakota State University</h3>
-                        <p class="subtle">Hardware Acceleration Intern <br>
-
-                            June 2026 - August 2026</p>
-                    </div>
-                    <p> Extending a hardware resource scheduler for a DNN accelerator using MILP and genetic algorithm search to reduce
-                        inference latency on an AMD Versal VCK190; proved and removed 9 redundant constraints while preserving
-                        scheduling correctness <br>
-
-                        Developed an automated hardware test-generation framework that targets uncovered RTL branches, increasing
-                        line/toggle/branch coverage from 20-60% to a consistent 95%; analyzed RTL simulation and synthesis results to
-                        verify functional behavior and timing across generated hardware designs
-                    </p>
-                </article>
-
-                <article class="timeline-item">
-                    <div>
-                        <h3>Princeton University</h3>
-                        <p class="subtle">Research Assistant <br>
-
-                            September 2025 - December 2025</p>
-                    </div>
-                    <p> Fabricated MAPbI3 and FAPbI3 perovskite solar cells using spin coating, thermal annealing, plasma treatment, and
-                        multilayer hole-transport-layer deposition; performed electrical bias testing and J-V characterization to evaluate
-                        efficiency, fill factor, and degradation across multiple device architectures <br>
-
-                        Analyzed XPS measurements of ion migration to correlate ion diffusion with device degradation and stability
-                    </p>
-                </article>
-
-                <article class="timeline-item">
-                    <div>
-                        <h3>Hoppe Lab</h3>
-                        <p class="subtle">Bioinformatics Software Intern <br>
-
-                            June 2025 - August 2025</p>
-                    </div>
-                    <p> Developed a Python CRISPR-Cas9 analysis pipeline that automated about 80% of manual gene
-                        ranking and comparison, reducing analysis time from over 8 hours to under 30 minutes <br>
-
-                        Used pandas, scikit-learn, gProfiler, and MyGene to rank and annotate candidate genes <br>
-
-                        Created documentation and presented technical demos for non-computational researcher </p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel" id="projects" data-panel="projects" tabindex="-1">
-        <div class="section-content">
+    <section class="content-section" id="projects">
+        <div class="section-heading">
+            <p class="eyebrow">Selected work</p>
             <h2>Projects</h2>
+        </div>
 
-            <div class="item-grid">
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-thumb empty-thumb">Image coming soon</div>
+                <div class="project-meta">
+                    <span>Project</span>
+                    <span>FPGA</span>
+                </div>
+                <h3>Handwritten Digit Classifier</h3>
+                <p>Transferring images over UART from iPad to Basys 3 Artix-7 FPGA, implemented CNN accelerator in SystemVerilog.</p>
+            </article>
 
-                <article class="project-item">
-                    <div class="project-thumb">
-                        <img src="images/cnn.png" alt="">
-                    </div>
-                    <h3>Handwritten Digit Classifier</h3>
-                    <p>Transferring images over UART from iPad to Basys 3 Artix-7 FPGA, implemented
-                        CNN accelerator in SystemVerilog
-                </article>
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/synth.png" alt="Analog synth">
+                </div>
+                <div class="project-meta">
+                    <span>Project</span>
+                    <span>Analog</span>
+                </div>
+                <h3>Analog Synthesizer</h3>
+                <p>Using a very simple breadboard setup with Arduino Uno R4.</p>
+            </article>
 
-                <article class="project-item">
-                    <div class="project-thumb">
-                        <img src="images/synth.png" alt="analog synth">
-                    </div>
-                    <h3>Analog synthesizer</h3>
-                    <p>Using a very simple breadboard set up + Arduino Uno R4</p>
-                </article>
+            <article class="project-card">
+                <div class="project-thumb empty-thumb">Image coming soon</div>
+                <div class="project-meta">
+                    <span>Project</span>
+                    <span>Audio</span>
+                </div>
+                <h3>Analog Drum Kit</h3>
+                <p>Breadboard setup.</p>
+            </article>
 
-                <article class="project-item">
-                    <div class="project-thumb"></div>
-                    <h3>Analog drum kit</h3>
-                    <p>Breadboard set up</p>
-                </article>
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/datapath.png" alt="Processor datapath project">
+                </div>
+                <div class="project-meta">
+                    <span>Project</span>
+                    <span>Verilog</span>
+                </div>
+                <h3>LC-3 ISA Processor</h3>
+                <p>Using Verilog and Vivado to implement the LC-3 ISA. Full design implemented on a Basys 3 Artix-7 FPGA.</p>
+            </article>
 
-                <article class="project-item">
-                    <div class="project-thumb">
-                        <img src="images/datapath.png" alt="processor project">
-                    </div>
-                    <h3>LC-3 ISA Processor</h3>
-                    <p>Using Verilog and Vivado to implement the LC-3 ISA. Full design implemented on a Basys 3 Artix-7 FPGA</p>
-                </article>
-
-                <article class="project-item">
-                    <div class="project-thumb">
-                        <img src="images/djcontr.png" alt="DJ controller project">
-                    </div>
-                    <h3>Full Analog DJ Controller</h3>
-                    <p>ECE203 Final Project. Using Arduino Uno + breadboard + Python interface to create a full working DJ setup</p>
-                </article>
-            </div>
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/djcontr.png" alt="DJ controller project">
+                </div>
+                <div class="project-meta">
+                    <span>Project</span>
+                    <span>Circuits</span>
+                </div>
+                <h3>Full Analog DJ Controller</h3>
+                <p>ECE203 Final Project. Using Arduino Uno, breadboard, and a Python interface to create a working DJ setup.</p>
+            </article>
         </div>
     </section>
 
-    <section class="panel" id="research" data-panel="research" tabindex="-1">
-        <div class="section-content">
+    <section class="content-section" id="experience">
+        <div class="section-heading">
+            <p class="eyebrow">Background</p>
+            <h2>Experience</h2>
+        </div>
+
+        <div class="list-stack">
+            <article class="experience-row">
+                <p class="date-range">June 2026 - August 2026</p>
+                <div>
+                    <h3>Hardware Acceleration Intern - North Dakota State University</h3>
+                    <p>Extending a hardware resource scheduler for a DNN accelerator using MILP and genetic algorithm search to reduce inference latency on an AMD Versal VCK190; proved and removed 9 redundant constraints while preserving scheduling correctness.</p>
+                    <p>Developed an automated hardware test-generation framework that targets uncovered RTL branches, increasing line/toggle/branch coverage from 20-60% to a consistent 95%.</p>
+                </div>
+            </article>
+
+            <article class="experience-row">
+                <p class="date-range">September 2025 - December 2025</p>
+                <div>
+                    <h3>Research Assistant - Princeton University</h3>
+                    <p>Fabricated MAPbI3 and FAPbI3 perovskite solar cells using spin coating, thermal annealing, plasma treatment, and multilayer hole-transport-layer deposition.</p>
+                    <p>Analyzed XPS measurements of ion migration to correlate ion diffusion with device degradation and stability.</p>
+                </div>
+            </article>
+
+            <article class="experience-row">
+                <p class="date-range">June 2025 - August 2025</p>
+                <div>
+                    <h3>Bioinformatics Software Intern - Hoppe Lab</h3>
+                    <p>Developed a Python CRISPR-Cas9 analysis pipeline that automated about 80% of manual gene ranking and comparison, reducing analysis time from over 8 hours to under 30 minutes.</p>
+                    <p>Used pandas, scikit-learn, gProfiler, and MyGene to rank and annotate candidate genes, and presented technical demos for non-computational researchers.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="content-section" id="research">
+        <div class="section-heading">
+            <p class="eyebrow">Writing and research</p>
             <h2>Research</h2>
-
-            <div class="timeline">
-                <article class="timeline-item research-item">
-                    <div>
-                        <h3>Metal Halide Perovskite Devices with Transport Layers that Inhibit Metal Migration</h3>
-                        <p class="subtle">Advisor: Professor Barry P. Rand, Princeton University, 12 Dec 2025</p>
-                    </div>
-
-                    <div class="research-link-wrap">
-                        <a class="research-link" href="https://github.com/akavasseri/perov_dev_research_abstract" target="_blank" rel="noreferrer">
-                            View research abstract
-                        </a>
-                    </div>
-                </article>
-
-                <div class="timeline">
-                    <article class="timeline-item research-item">
-                    <div>
-                        <h3>Functional Test Coverage RTL Verification Loop</h3>
-                        <p class="subtle">Advisor: Professor Umamaheswara Rao Tida, North Dakota State University, 15 Aug 2026</p>
-                    </div>
-                    <div class="research-link-wrap">
-                        <a class="research-link" href="https://github.com/akavasseri" target="_blank" rel="noreferrer">
-                            View research abstract
-                        </a>
-                    </div>
-                </article>
-            </div>
         </div>
+
+        <div class="list-stack">
+            <article class="research-row">
+                <div>
+                    <h3>Metal Halide Perovskite Devices with Transport Layers that Inhibit Metal Migration</h3>
+                    <p class="subtle">Advisor: Professor Barry P. Rand, Princeton University, 12 Dec 2025</p>
+                </div>
+                <a class="text-link" href="https://github.com/akavasseri/perov_dev_research_abstract" target="_blank" rel="noreferrer">View abstract</a>
+            </article>
+
+            <article class="research-row">
+                <div>
+                    <h3>Functional Test Coverage RTL Verification Loop</h3>
+                    <p class="subtle">Advisor: Professor Umamaheswara Rao Tida, North Dakota State University, 15 Aug 2026</p>
+                </div>
+                <a class="text-link" href="https://github.com/akavasseri" target="_blank" rel="noreferrer">View abstract</a>
+            </article>
         </div>
     </section>
 
-    <section class="panel" id="blog" data-panel="blog" tabindex="-1">
-        <div class="section-content">
+    <section class="content-section" id="blog">
+        <div class="section-heading">
+            <p class="eyebrow">Notes</p>
             <h2>Blog</h2>
-
-            <div class="timeline">
-                <article class="timeline-item">
-                    <div>
-                        <h3>Introduction to me!</h3>
-                        <p class="subtle">July 2026</p>
-                    </div>
-                    <p>Add essays, updates, tutorials, reading notes, or project writeups here.</p>
-                </article>
-            </div>
         </div>
+
+        <article class="blog-row">
+            <p class="date-range">July 2026</p>
+            <div>
+                <h3>Introduction to me!</h3>
+                <p>Add essays, updates, tutorials, reading notes, or project writeups here.</p>
+            </div>
+        </article>
     </section>
 </main>
 
