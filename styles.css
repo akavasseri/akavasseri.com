@@ -153,10 +153,10 @@ h3 {
 }
 
 .intro-summary {
-  max-width: 66ch;
-  margin: 0.8rem 0 0;
-  color: var(--muted);
-  font-size: clamp(0.98rem, 1.6vw, 1.12rem);
+    max-width: 66ch;
+    margin: 0.8rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
 .quick-links {
@@ -193,6 +193,10 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1rem, 4vw, 2rem);
+}
+
+.about-heading {
+  margin-bottom: 0;
 }
 
 .intro-details article {
@@ -248,7 +252,9 @@ ul {
   grid-template-columns: minmax(0, 1fr) minmax(180px, 320px);
   gap: clamp(1rem, 4vw, 2rem);
   align-items: start;
-  padding: 0;
+  margin: -0.9rem -1rem;
+  padding: 0.9rem 1rem;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .project-entry:first-child {
@@ -257,6 +263,17 @@ ul {
 
 .project-entry.no-image {
   grid-template-columns: minmax(0, 1fr);
+}
+
+.project-entry:hover,
+.project-entry:focus-within,
+.experience-row:hover,
+.experience-row:focus-within,
+.research-row:hover,
+.research-row:focus-within,
+.blog-row:hover,
+.blog-row:focus-within {
+  background: rgba(255, 241, 220, 0.72);
 }
 
 .project-copy {
@@ -315,7 +332,9 @@ ul {
   display: grid;
   grid-template-columns: minmax(150px, 0.25fr) minmax(0, 1fr);
   gap: clamp(1rem, 4vw, 2rem);
-  padding: 0;
+  margin: -0.9rem -1rem;
+  padding: 0.9rem 1rem;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .experience-row div {
@@ -335,7 +354,9 @@ ul {
   grid-template-columns: minmax(0, 1fr) max-content;
   align-items: start;
   gap: 1rem;
-  padding: 0;
+  margin: -0.9rem -1rem;
+  padding: 0.9rem 1rem;
+  transition: background-color 160ms ease, transform 160ms ease;
 }
 
 .research-row .subtle {
