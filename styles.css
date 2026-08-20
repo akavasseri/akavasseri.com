@@ -240,7 +240,7 @@ ul {
 
 .project-list {
   display: grid;
-  gap: 0;
+  gap: clamp(1.8rem, 4vw, 3rem);
 }
 
 .project-entry {
@@ -248,13 +248,11 @@ ul {
   grid-template-columns: minmax(0, 1fr) minmax(180px, 320px);
   gap: clamp(1rem, 4vw, 2rem);
   align-items: start;
-  padding: clamp(1.25rem, 3vw, 2rem) 0;
-  border-top: 1px solid var(--line);
+  padding: 0;
 }
 
 .project-entry:first-child {
-  border-top: 1px solid var(--line);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0;
 }
 
 .project-entry.no-image {
@@ -309,7 +307,7 @@ ul {
 
 .list-stack {
   display: grid;
-  gap: 0;
+  gap: clamp(1.8rem, 4vw, 3rem);
 }
 
 .experience-row,
@@ -317,8 +315,7 @@ ul {
   display: grid;
   grid-template-columns: minmax(150px, 0.25fr) minmax(0, 1fr);
   gap: clamp(1rem, 4vw, 2rem);
-  padding: clamp(1.25rem, 3vw, 2rem) 0;
-  border-top: 1px solid var(--line);
+  padding: 0;
 }
 
 .experience-row div {
@@ -338,8 +335,7 @@ ul {
   grid-template-columns: minmax(0, 1fr) max-content;
   align-items: start;
   gap: 1rem;
-  padding: clamp(1.25rem, 3vw, 2rem) 0;
-  border-top: 1px solid var(--line);
+  padding: 0;
 }
 
 .research-row .subtle {
